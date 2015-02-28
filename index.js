@@ -18,6 +18,12 @@ var language = require("cssauron")({
   id: function(node) {
     return node.properties.id;
   },
+}, function(type, pattern, data) {
+  if (type == 'tag') {
+    return pattern && pattern.toLowerCase() == data.toLowerCase();
+  } else {
+    return pattern === data;
+  }
 });
 
 module.exports = function(sel) {
