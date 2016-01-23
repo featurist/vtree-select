@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/parshap/vtree-select",
   "dependencies": {
-    "cssauron": "^1.2.0"
+    "cssauron": "git://github.com/featurist/cssauron.git#case-insensitive-tags"
   },
   "devDependencies": {
     "virtual-dom": "^2.1.1"

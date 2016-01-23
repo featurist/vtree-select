@@ -5,11 +5,11 @@ var select = require("./");
 
 var span1 = h("span.span1", "hello world");
 var span2 = h("span.span2", "hello world2");
-var li = h("li", "item");
+var li = h("LI", "item");
 var ul = h("ul", [li]);
 var props = h("div", { label : 'label' });
 var attrs = h("div", { attributes : {'custom-attr' : 'custom'} });
-var tree = h("div#tree", [span1, span2, ul]);
+var tree = h("DIV#tree", [span1, span2, ul]);
 
 var assert = require("assert");
 
@@ -30,7 +30,7 @@ assert.deepEqual(select("span.span1")(tree), [span1]);
 assert.deepEqual(select("span.span2")(tree), [span2]);
 
 // 3rd tier children
-assert.deepEqual(select("div ul li")(tree), [li]);
+assert.deepEqual(select("div ul LI")(tree), [li]);
 
 // * operator
 assert.deepEqual(select("div ul > li")(tree), [li]);
